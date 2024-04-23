@@ -1,5 +1,6 @@
 import Link from "../src/components/link";
 import PageTitle from "../src/components/page-title";
+import FAQScreen from "../src/screens/faq-screen";
 
 // SSG - Static Site Generation
 // SSR - Server Side Rendering
@@ -34,22 +35,24 @@ export async function getStaticProps() {
   };
 }
 
-export default function FAQPage({ faq }) {
-  return (
-    <div>
-      <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
-      <h1>Alura Cases - Página de Perguntas FAQ</h1>
-      <Link href="/">Ir para a página home</Link>
-      <ul>
-        {faq.map(({ answer, question }) => (
-          <li key={question}>
-            <article>
-              <h2>{question}</h2>
-              <p>{answer}</p>
-            </article>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+export default FAQScreen;
+
+// export default function FAQPage({ faq }) {
+//   return (
+//     <div>
+//       <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
+//       <h1>Alura Cases - Página de Perguntas FAQ</h1>
+//       <Link href="/">Ir para a página home</Link>
+//       <ul>
+//         {faq.map(({ answer, question }) => (
+//           <li key={question}>
+//             <article>
+//               <h2>{question}</h2>
+//               <p>{answer}</p>
+//             </article>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
